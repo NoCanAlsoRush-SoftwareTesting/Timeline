@@ -99,7 +99,7 @@ public class TimeLineFrameTest {
     public void testMore() throws Exception{
         try {
             timeLineFrame.refresh();
-            Method method = timeLineFrame.getClass().getDeclaredMethod("loadComment");
+            Method method = timeLineFrame.getClass().getDeclaredMethod("more");
             method.setAccessible(true);
             method.invoke(timeLineFrame,null);
             sleep(1000);
