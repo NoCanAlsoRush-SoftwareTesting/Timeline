@@ -79,6 +79,16 @@ class CommentDaoImpTest {
     }
 
     @Test
+    void insertInvalidCommentTest() throws SQLException{
+        //stubbing method
+        when(conn.prepareStatement(anyString())).thenReturn(pstmt);
+        Comment comment = new Comment(1,"df","ds","sdf","2019");
+        when(pstmt.executeUpdate()).thenThrow(new SQLException());
+        //assertThrows(SQLException.class,()->commentDaoImp.insertComment(comment));
+        assertEquals(false,commentDaoImp.insertComment(comment));
+    }
+
+    @Test
     void deleteCommentTest() throws Exception {
 
         //creating testing id
@@ -104,6 +114,17 @@ class CommentDaoImpTest {
         verify(pstmt).close();
         verify(conn).close();
     }
+
+    @Test
+    void deleteValidCommentTest() throws SQLException{
+        //creating testing id
+        int usrId = 9;
+        when(conn.prepareStatement(anyString())).thenReturn(pstmt);
+        when(pstmt.executeUpdate()).thenThrow(new SQLException());
+        assertEquals(false,commentDaoImp.deleteComment(usrId));
+
+    }
+
 
     @Test
     void findCommentList() throws  Exception{
@@ -140,5 +161,24 @@ class CommentDaoImpTest {
         verify(rs).close();
         verify(pstmt).close();
         verify(conn).close();
+    }
+
+    @Test
+    void findValidCommentTest() throws SQLException{
+        //creating testing id
+        ResultSet rs = Mockito.mock(ResultSet.class);
+        List<Comment> commentList;
+
+        int userId = 9;
+        String userName = "lionel";
+        String commentText = "hello world";
+        String picture = "p1";
+        String timeStamp = "2019-11-11";
+
+        //stubbing method
+        when(conn.prepareStatement(anyString())).thenReturn(pstmt);
+        when(pstmt.executeQuery()).thenThrow(new SQLException());
+        assertEquals(null,commentDaoImp.findCommentList());
+
     }
 }
