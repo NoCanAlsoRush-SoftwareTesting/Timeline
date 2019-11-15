@@ -7,6 +7,7 @@ import com.timeline.daoimp.CommentDaoImp;
 
 import javax.swing.*;
 import java.awt.*;
+import java.text.ParseException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
@@ -23,7 +24,7 @@ public class TimeLineFrame extends JFrame {
     private List<Comment> commentList = new ArrayList<>();
     private CommentDaoImp cdl = new CommentDaoImp();
 
-    public TimeLineFrame(){
+    public TimeLineFrame() throws ParseException {
         setTitle("TIMELINE");
         setSize(DEFAULT_WIDTH,DEFAULT_HEIGTH);
         setVisible(true);
@@ -33,7 +34,13 @@ public class TimeLineFrame extends JFrame {
         headLabel.setFont(new Font("宋体",Font.PLAIN,42));
         JButton refreshButton = new JButton("刷新");
         refreshButton.setContentAreaFilled(false);
-        refreshButton.addActionListener(e -> refresh());
+        refreshButton.addActionListener(e -> {
+            try {
+                refresh();
+            } catch (ParseException ex) {
+                ex.printStackTrace();
+            }
+        });
 
         Box topBox = Box.createHorizontalBox();
         topBox.add(Box.createGlue());
@@ -44,7 +51,13 @@ public class TimeLineFrame extends JFrame {
 
         JButton moreButton = new JButton("更多");
         moreButton.setContentAreaFilled(false);
-        moreButton.addActionListener(e -> more());
+        moreButton.addActionListener(e -> {
+            try {
+                more();
+            } catch (ParseException ex) {
+                ex.printStackTrace();
+            }
+        });
         JButton addButton = new JButton("添加");
         addButton.addActionListener(e -> {showAddCommentDialog();dialog.setVisible(true);});
 
@@ -64,7 +77,7 @@ public class TimeLineFrame extends JFrame {
     }
 
     //在ui中展示评论
-    private void loadComment(){
+    private void loadComment() throws ParseException {
 
         JScrollPane scroll = new JScrollPane();
         Box commentBox = Box.createVerticalBox();
@@ -108,14 +121,14 @@ public class TimeLineFrame extends JFrame {
     }
 
     //刷行界面
-    private void refresh(){
+    private void refresh() throws ParseException {
         removeContent();
         newTenComment();
         loadComment();
     }
 
     //查看更早的十条评论
-    private void more(){
+    private void more() throws ParseException {
         removeContent();
         nextTenComment();
         loadComment();
