@@ -120,8 +120,8 @@ public class TimeLineFrame extends JFrame {
         commentList = allCommentList.subList(0,end);
     }
 
-    //刷行界面
-    private void refresh() throws ParseException {
+    //刷新界面
+    public void refresh() throws ParseException {
         removeContent();
         newTenComment();
         loadComment();
