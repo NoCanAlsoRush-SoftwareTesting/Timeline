@@ -39,7 +39,7 @@ class CommentDaoImpTest {
     }
 
     @Test
-    void insertCommentTest()  throws Exception{
+    void when_insert_a_comment_then_comment_be_inserted_and_return_true()  throws Exception{
 
         //creating testing comment
         int userId = 9;
@@ -50,7 +50,7 @@ class CommentDaoImpTest {
         Comment comment = new Comment(userId,userName,commentText,picture,timeStamp);
 
         //stubbing method
-        when(conn.prepareStatement(anyString())).thenReturn(pstmt);
+        when(conn.prepareStatement("insert into comments(uid,username,comment,picture,timestamp) values (?,?,?,?,?)")).thenReturn(pstmt);
 
         //calling the method
         boolean res = commentDaoImp.insertComment(comment);
@@ -89,13 +89,13 @@ class CommentDaoImpTest {
     }
 
     @Test
-    void deleteCommentTest() throws Exception {
+    void when_delete_a_comment_according_to_id_then_comment_be_deleted_and_return_true() throws Exception {
 
         //creating testing id
         int usrId = 9;
 
         //stubbing method
-        when(conn.prepareStatement(anyString())).thenReturn(pstmt);
+        when(conn.prepareStatement("delete from comments where uid = ?")).thenReturn(pstmt);
 
         //calling testing method
         boolean res = commentDaoImp.deleteComment(usrId);
@@ -127,7 +127,8 @@ class CommentDaoImpTest {
 
 
     @Test
-    void findCommentList() throws  Exception{
+    void when_find_Comments_then_return_a_list_of_all_comments() throws  Exception{
+
 
         ResultSet rs = Mockito.mock(ResultSet.class);
         List<Comment> commentList;
@@ -139,7 +140,7 @@ class CommentDaoImpTest {
         String timeStamp = "2019-11-11";
 
         //stubbing method
-        when(conn.prepareStatement(anyString())).thenReturn(pstmt);
+        when(conn.prepareStatement("select * from comments order by timestamp desc")).thenReturn(pstmt);
         when(pstmt.executeQuery()).thenReturn(rs);
         when(rs.next()).thenReturn(true).thenReturn(false);
         when(rs.getInt("uid")).thenReturn(userId);
