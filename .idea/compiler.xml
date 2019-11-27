@@ -6,8 +6,8 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="timelinedemo" />
         <module name="timeline-demo" />
+        <module name="timelinedemo" />
       </profile>
     </annotationProcessing>
   </component>

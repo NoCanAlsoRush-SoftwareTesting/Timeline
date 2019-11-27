@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="426f7707-7699-452d-9734-ebf731d2d046" name="Default Changelist" comment="" />
+    <list default="true" id="426f7707-7699-452d-9734-ebf731d2d046" name="Default Changelist" comment="ExceptionTest" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +29,9 @@
       <replace>dbUtil</replace>
     </replaceStrings>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -41,11 +44,12 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectId" id="1UD482Haq5b6Ms5vDjO0CaieEhx" />
+  <component name="ProjectId" id="1UD87ZXmsxwGuhuiOuxVS0LGblW" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1573732110038" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1573897911663" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -78,7 +82,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.TimeLineFrameTest">
+  <component name="RunManager" selected="JUnit.CommentDaoImpTest.findValidCommentTest">
     <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.timeline.Main" />
       <module name="timelinedemo" />
@@ -123,43 +127,45 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CommentTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="timelinedemo" />
+    <configuration name="CommentDaoImpTest.findValidCommentTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="timeline-demo" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.timeline.entity.*" />
+          <option name="PATTERN" value="com.timeline.daoimp.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.timeline.entity" />
-      <option name="MAIN_CLASS_NAME" value="com.timeline.entity.CommentTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="com.timeline.daoimp" />
+      <option name="MAIN_CLASS_NAME" value="com.timeline.daoimp.CommentDaoImpTest" />
+      <option name="METHOD_NAME" value="findValidCommentTest" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TimeLineFrameTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CommentDaoImpTest.insertInvalidCommentTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="timeline-demo" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.timeline.ui.*" />
+          <option name="PATTERN" value="com.timeline.daoimp.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.timeline.ui" />
-      <option name="MAIN_CLASS_NAME" value="com.timeline.ui.TimeLineFrameTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="com.timeline.daoimp" />
+      <option name="MAIN_CLASS_NAME" value="com.timeline.daoimp.CommentDaoImpTest" />
+      <option name="METHOD_NAME" value="insertInvalidCommentTest" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TimeLineFrameTest" />
+        <item itemvalue="JUnit.CommentDaoImpTest.findValidCommentTest" />
+        <item itemvalue="JUnit.CommentDaoImpTest.insertInvalidCommentTest" />
         <item itemvalue="Application.Main (1)" />
         <item itemvalue="JUnit.CommentDaoImpTest" />
         <item itemvalue="JUnit.CommentDaoImpTest.findCommentList" />
-        <item itemvalue="JUnit.CommentTest" />
       </list>
     </recent_temporary>
   </component>
@@ -176,12 +182,69 @@
       <workItem from="1573573590245" duration="900000" />
       <workItem from="1573576705319" duration="20356000" />
       <workItem from="1573732042019" duration="287000" />
-      <workItem from="1574877671680" duration="309000" />
+      <workItem from="1573810958306" duration="97000" />
+      <workItem from="1573811160753" duration="603000" />
+      <workItem from="1573811995964" duration="116000" />
+      <workItem from="1573894476721" duration="2937000" />
+      <workItem from="1574879647884" duration="43000" />
     </task>
+    <task id="LOCAL-00001" summary="ExceptionTest">
+      <created>1573812043828</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1573812043829</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="CommentDaoImpTest_findCommentList - 2019.11.13 at 22h 55m 20s.xml">
+      <configuration name="CommentDaoImpTest.findCommentList" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CommentDaoImpTest_findCommentList - 2019.11.13 at 22h 57m 56s.xml">
+      <configuration name="CommentDaoImpTest.findCommentList" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CommentDaoImpTest_findCommentList - 2019.11.13 at 22h 58m 28s.xml">
+      <configuration name="CommentDaoImpTest.findCommentList" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CommentDaoImpTest - 2019.11.13 at 23h 03m 01s.xml">
+      <configuration name="CommentDaoImpTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CommentTest - 2019.11.13 at 23h 03m 07s.xml">
+      <configuration name="CommentTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CommentDaoImpTest_findCommentList - 2019.11.13 at 23h 07m 30s.xml">
+      <configuration name="CommentDaoImpTest.findCommentList" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CommentDaoImpTest - 2019.11.13 at 23h 07m 36s.xml">
+      <configuration name="CommentDaoImpTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CommentDaoImpTest - 2019.11.13 at 23h 28m 30s.xml">
+      <configuration name="CommentDaoImpTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CommentDaoImpTest_insertInvalidCommentTest - 2019.11.15 at 17h 43m 34s.xml">
+      <configuration name="CommentDaoImpTest.insertInvalidCommentTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CommentDaoImpTest_findValidCommentTest - 2019.11.15 at 17h 46m 12s.xml">
+      <configuration name="CommentDaoImpTest.findValidCommentTest" configurationId="JUnit" />
+    </history-entry>
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="ExceptionTest" />
+    <option name="LAST_COMMIT_MESSAGE" value="ExceptionTest" />
   </component>
   <component name="masterDetails">
     <states>
