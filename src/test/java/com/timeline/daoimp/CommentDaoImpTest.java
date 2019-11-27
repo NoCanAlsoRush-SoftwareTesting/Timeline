@@ -129,6 +129,7 @@ class CommentDaoImpTest {
     @Test
     void when_find_Comments_then_return_a_list_of_all_comments() throws  Exception{
 
+
         ResultSet rs = Mockito.mock(ResultSet.class);
         List<Comment> commentList;
 
