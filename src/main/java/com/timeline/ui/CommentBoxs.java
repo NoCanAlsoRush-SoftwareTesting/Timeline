@@ -49,24 +49,30 @@ public class CommentBoxs {
 
     public static String convert(String dateTimeStamp) throws ParseException {
         String result;
-        int  minute = 1000 * 60;
-        int hour = minute * 60;
-        int day = hour * 24;
-        int halfamonth = day * 15;
-        int month = day * 30;
+        long  minute = 1000 * 60;
+        long hour = minute * 60;
+        long day = hour * 24;
+        long mouth = day *31;
         long now = new java.util.Date().getTime();
         final SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         final Date datetime = sdf.parse(dateTimeStamp);
         final long time = datetime.getTime();
 
-        long diffValue = now - time;
-        if(diffValue < 0){
-            return "";
-        }
+        final long diffValue = now - time;
+
         long dayC = diffValue / day;
         long hourC = diffValue / hour;
         long minC = diffValue / minute;
-        if(dayC>=1){
+        long mouthC= diffValue/ mouth;
+        if(diffValue < 0){
+            return  "false";
+        }
+        if(mouthC >=1)
+        {
+            System.out.println("mouth");
+            result= sdf.format(datetime);
+        }
+       else if(dayC>=1){
             result=""+ dayC +"天前";
         }
         else if(hourC>=1){
@@ -74,7 +80,7 @@ public class CommentBoxs {
         }
         else if(minC>=1){
             result=""+ minC +"分钟前";
-        }else{
+        }else {
             result="刚刚";
         }
         return result;

@@ -62,7 +62,7 @@ class CommentBoxsTest {
 
     public void testConvert_a_few_hours_ago() throws ParseException {
         Date currentTime = new Date();
-        //比当前时间早1分钟
+        //比当前时间早1个小时
         Date afterDate = new Date(currentTime.getTime()-60000*60);
         SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         String dateString = formatter.format(afterDate);
@@ -74,12 +74,24 @@ class CommentBoxsTest {
 
     public void testConvert_a_few_days_ago() throws ParseException {
         Date currentTime = new Date();
-        //比当前时间早1分钟
+        //比当前时间早1天
         Date afterDate = new Date(currentTime.getTime()-60000*60*24);
         SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         String dateString = formatter.format(afterDate);
         String afterConvert = box.convert(dateString);
         assertEquals("1天前",afterConvert);
+    }
+    public void testConvert_more_than_a_few_days_ago() throws ParseException {
+        Date currentTime = new Date();
+        //一个月前
+        Date afterDate1 = new Date(currentTime.getTime()-60000*60*24*15);
+        Date afterDate = new Date(afterDate1.getTime()-60000*60*24*16);
+
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        String dateString = formatter.format(afterDate);
+        String afterConvert = box.convert(dateString);
+        System.out.println(afterConvert);
+        assertEquals(dateString,afterConvert);
     }
 
 }

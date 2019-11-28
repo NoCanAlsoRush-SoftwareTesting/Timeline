@@ -21,6 +21,11 @@ public class TimeLineFrame extends JFrame {
     public JDialog dialog = null;
 
     private List<Comment> allCommentList = new ArrayList<>();
+
+    public List<Comment> getCommentList() {
+        return commentList;
+    }
+
     private List<Comment> commentList = new ArrayList<>();
     private CommentDaoImp cdl = new CommentDaoImp();
 
