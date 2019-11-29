@@ -49,7 +49,7 @@ public class TimeLineFrameTest {
     @org.junit.Test
     public void testGetCommentList() throws Exception{
         timeLineFrame.refresh();
-        assertEquals(10,timeLineFrame.commentList.size());
+        assertEquals(10,timeLineFrame.getCommentList().size());
     }
 
     /*

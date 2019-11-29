@@ -20,8 +20,10 @@ public class TimeLineFrame extends JFrame {
     private static final Font DEFAULT_FONT = new Font("宋体", Font.PLAIN, FONT_SIZE);
     public JDialog dialog = null;
 
+
     public List<Comment> allCommentList = new ArrayList<>();
     public List<Comment> commentList = new ArrayList<>();
+  
     private CommentDaoImp cdl = new CommentDaoImp();
 
     public TimeLineFrame() throws ParseException {
