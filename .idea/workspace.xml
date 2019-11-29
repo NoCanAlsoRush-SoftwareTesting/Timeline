@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+
     <list default="true" id="426f7707-7699-452d-9734-ebf731d2d046" name="Default Changelist" comment="ExceptionTest">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
@@ -17,6 +18,7 @@
       <FILTER>com.timeline.daoimp.*</FILTER>
     </SUITE>
   </component>
+
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
@@ -117,6 +119,7 @@
       </file>
     </leaf>
   </component>
+
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -135,6 +138,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -151,6 +155,7 @@
         <option value="$PROJECT_DIR$/src/test/java/com/timeline/daoimp/CommentDaoImpTest.java" />
       </list>
     </option>
+
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -164,6 +169,8 @@
       </MavenImportingSettings>
     </option>
   </component>
+
+=======
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="y" value="22" />
     <option name="width" value="1680" />
@@ -385,6 +392,8 @@
       <workItem from="1573811160753" duration="603000" />
       <workItem from="1573811995964" duration="116000" />
       <workItem from="1573894476721" duration="2937000" />
+      
+      <workItem from="1574879647884" duration="43000" />
     </task>
     <task id="LOCAL-00001" summary="ExceptionTest">
       <created>1573812043828</created>
@@ -428,6 +437,7 @@
       <configuration name="CommentDaoImpTest.findValidCommentTest" configurationId="JUnit" />
     </history-entry>
   </component>
+
   <component name="TimeTrackingManager">
     <option name="totallyTimeSpent" value="25296000" />
   </component>
@@ -474,6 +484,7 @@
       <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info anchor="right" id="Coverage" order="9" side_tool="true" weight="0.32967034" />
     </layout>
+
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -481,6 +492,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="ExceptionTest" />
     <option name="LAST_COMMIT_MESSAGE" value="ExceptionTest" />
+
+
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/Main.java" />
@@ -563,6 +576,7 @@
         </state>
       </provider>
     </entry>
+
   </component>
   <component name="masterDetails">
     <states>
