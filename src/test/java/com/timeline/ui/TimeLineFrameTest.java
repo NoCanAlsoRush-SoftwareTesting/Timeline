@@ -43,6 +43,10 @@ public class TimeLineFrameTest {
         return num;
     }
 
+    /*
+    测试getCommentList()
+     */
+    @org.junit.Test
     public void testGetCommentList() throws Exception{
         timeLineFrame.refresh();
         assertEquals(10,timeLineFrame.getCommentList().size());
@@ -51,6 +55,7 @@ public class TimeLineFrameTest {
     /*
     测试refresh()
      */
+    @org.junit.Test
     public void testRefresh()throws Exception{
         try {
             Method method = timeLineFrame.getClass().getDeclaredMethod("refresh");
@@ -77,7 +82,7 @@ public class TimeLineFrameTest {
     /*
     测试loadComment()
      */
-    @Test
+    @org.junit.Test
     public void testLoadComment() throws Exception{
         try {
             timeLineFrame.refresh();
@@ -95,7 +100,7 @@ public class TimeLineFrameTest {
     /*
     测试获取以往的评论
      */
-    @Test
+    @org.junit.Test
     public void testMore() throws Exception{
         try {
             timeLineFrame.refresh();
@@ -112,7 +117,7 @@ public class TimeLineFrameTest {
     /*
     测试removeContent()
      */
-    @Test
+    @org.junit.Test
     public void testRemoveContent() throws Exception{
         try {
             Method method = timeLineFrame.getClass().getDeclaredMethod("removeContent");
@@ -128,7 +133,7 @@ public class TimeLineFrameTest {
     /*
     测试showAddCommentDialog()
      */
-    @Test
+    @org.junit.Test
     public void testShowAddCommentDialog() throws Exception {
         try {
             Method method = timeLineFrame.getClass().getDeclaredMethod("showAddCommentDialog");
